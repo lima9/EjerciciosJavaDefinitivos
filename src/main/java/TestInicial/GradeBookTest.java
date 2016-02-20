@@ -26,8 +26,10 @@ public class GradeBookTest
         String NameOfCourse = input.nextLine();
         myGradeBook.setCourseName(NameOfCourse);
         System.out.println();
-        myGradeBook.displayMessage();
-        myGradeBook.DetermineClassAverage();
+        //myGradeBook.displayMessage();
+        //myGradeBook.DetermineClassAverage();
+        myGradeBook.InputGrades();
+        myGradeBook.DisplayGradeReport();
     }
 }
 
