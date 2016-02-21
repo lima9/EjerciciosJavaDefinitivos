@@ -28,7 +28,7 @@ public class EStexto
 
         try
         {
-            inputStream = new BufferedReader(new FileReader("Numero<1000.txt"));
+            inputStream = new BufferedReader(new FileReader(File));
 
             String Line;
 
