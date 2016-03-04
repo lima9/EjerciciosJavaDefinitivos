@@ -5,20 +5,47 @@ package Ejercicio1;
  */
 public class Tree
 {
+
+
+    private int altura;
+    private String nombre;
+
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Tree()
     {
-     System.out.println("Un árbol");
+        this(0,"Un árbol");
+        //System.out.println("Un árbol");
     }
     public Tree(int altura)
     {
-        System.out.println("Un árbol de " + altura + " metros");
+        this(altura,"Un árbol");
+        //System.out.println("Un árbol de " + altura + " metros");
     }
     public Tree(String nombre)
     {
-        System.out.println("Un " + nombre);
+        this(0,nombre);
+        //System.out.println("Un " + nombre);
     }
     public Tree(int altura, String nombre)
     {
-        System.out.println("Un " + nombre + " de " + altura + " metros");
+        this.altura = altura;
+        this.nombre = nombre;
+        //System.out.println("Un " + nombre + " de " + altura + " metros");
     }
 }

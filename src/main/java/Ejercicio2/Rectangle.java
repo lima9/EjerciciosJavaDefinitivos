@@ -32,6 +32,7 @@ public class Rectangle extends AbstractShape
         this.width = width;
     }
 
+    //Cada uno implementa area como quiere
     public double area() {
         return width * height;
     }

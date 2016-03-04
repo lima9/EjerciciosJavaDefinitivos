@@ -16,10 +16,16 @@ public class App {
         arboles[2] = new Tree();
         arboles[3] = new Tree(5,"Pino");
 
-        System.out.printf("%d\n%s\n%s\n%s%d",
-                arboles[0],arboles[1],arboles[2],arboles[3]);
+        System.out.println(arboles[0].getNombre() + " de " + arboles[0].getAltura() + " metros");
+        System.out.println(arboles[1].getNombre());
 
 
- }
+
+
+
+
+//        System.out.printf("%d\n%s\n%s\n%s%d",
+  //              arboles[0],arboles[1],arboles[2],arboles[3]);
+    }
 
 }
