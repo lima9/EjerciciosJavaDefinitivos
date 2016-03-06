@@ -47,7 +47,6 @@ public class EStexto
                 }
                 Counter++;
             }
-            inputStream.close();
 
         }
         catch (FileNotFoundException e)
@@ -69,6 +68,17 @@ public class EStexto
         {
             System.out.println(e.getMessage());
             System.exit(1);
+        }
+        finally
+        {
+            try
+            {
+                inputStream.close();
+            }
+            catch (IOException e)
+            {
+                e.printStackTrace();
+            }
         }
 
         Average = Total / Counter;

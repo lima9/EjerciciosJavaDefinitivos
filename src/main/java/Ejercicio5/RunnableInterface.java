@@ -8,7 +8,8 @@ import static java.lang.Thread.sleep;
 /**
  * Created by lima on 2/21/16.
  */
-public class RunnableInterface implements Runnable{
+public class RunnableInterface implements Runnable
+{
 
     int ThreadNum;
     double ms = 0.0;
@@ -34,7 +35,7 @@ public class RunnableInterface implements Runnable{
 
             try
             {
-                sleep(RandomGen.nextInt(2000));
+                sleep(RandomGen.nextInt(20));
             }
             catch (InterruptedException e)
             {}

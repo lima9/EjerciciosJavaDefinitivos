@@ -17,7 +17,7 @@ public class FileParsingException extends Exception
 
     public FileParsingException(String Message)
     {
-        super();
+        super();//constructor de Exception
         this.Message = Message;
     }
 

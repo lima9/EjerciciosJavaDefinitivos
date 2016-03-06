@@ -8,39 +8,52 @@ import java.io.*;
 public class ESbinario
 {
 
-        int entero;
+    public int getEntero() {
+        return entero;
+    }
+
+    int entero;
         double decimal;
         char caracter;
+
         static File fichero;
-        final static String ruta_guardado ="Binario.txt";
+
+        final static String ruta_guardado ="/home/lima/Desktop/Binario";
 
         public static void main(String[] args) throws IOException{
 
-            escribirFicheroBinario(3,2.3,'t');
-            leerFicheroBinario(ruta_guardado);
+            escribirFicheroBinario(ruta_guardado, 3,2.3,'t');
+            ESbinario esb = leerFicheroBinario(ruta_guardado);
+            System.out.println(esb.caracter);
+            System.out.println(esb.entero);
+            System.out.println(esb.decimal);
+
+
 
         }
-        public static void escribirFicheroBinario(int entero, double d, char c) throws IOException{
+        public static void escribirFicheroBinario(String ruta, int enteros, double d, char c) throws IOException{
 
             DataOutputStream dos = new DataOutputStream(new FileOutputStream(ruta_guardado));
-            dos.writeInt(entero);
+            dos.writeInt(enteros);
             dos.writeDouble(d);
             dos.writeChar(c);
             dos.close();
-
+            fichero = null;
         }
 
-        public static void leerFicheroBinario(String ruta_fichero) throws IOException{
+        public static ESbinario leerFicheroBinario(String ruta_fichero) throws IOException{
 
             DataInputStream dis = new DataInputStream(new FileInputStream(ruta_fichero));
 
-            int numero = dis.readInt();
-            double decimal = dis.readDouble();
-            char caracter = dis.readChar();
+            ESbinario esb = new ESbinario();
 
-            System.out.println("NUMERO : "+numero);
-            System.out.println("CARACTER : "+caracter);
-            System.out.println("DECIMAL : "+decimal);
+            esb.entero = dis.readInt();
+            esb.decimal = dis.readDouble();
+            esb.caracter = dis.readChar();
+
+            return esb;
+
+
 
         }
 
